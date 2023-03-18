@@ -1,5 +1,11 @@
-# ProjectDigital1
-This is the digital design I project
+# Digital Design I
+Quine-McCluskey Logic Minimization
+
+Ahmed Moamen,
+Youssof Alwardany,
+Aly
+
+
 # Building Project:
 You must first access the code button, which is situated above the project in the page's upper right corner, in order to build and run a project. You must then select the download choice in order to save the project files to your computer. Once you've downloaded the project files, you can open them in Xcode or Visual Studio by starting a new project and selecting the choice for existing files. In order to execute the project, you can finally compile and build it.
 
