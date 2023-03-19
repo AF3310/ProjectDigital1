@@ -3,7 +3,7 @@ Quine-McCluskey Logic Minimization
 
 Ahmed Moamen,
 Youssof Alwardany,
-Aly
+Aly Fakhereldein
 
 
 # Building Project:
