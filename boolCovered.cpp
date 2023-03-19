@@ -11,6 +11,7 @@ public:
     std::string value; // The value of the covered string
     std::vector<int> coverIndexes; // The indexes of the minterms that cover this string
     bool isCombined; // Flag indicating whether this string has been combined with another one
+    bool visited;
     coveredBool() {
         value = "";
         isCombined = false;
@@ -139,8 +140,12 @@ vector<vector<coveredBool>> groupprimes(vector<vector<coveredBool>>& mintermGrou
                     if (!duplicate) {
 
                         primeimplicants[i].push_back(combinedMin);
+                        //primeimplicants[i].visited = true;
+                        
                     }
                     mintermGroups[i][j].isCombined = true;
+                    mintermGroups[i][j].visited = true;
+
                     mintermGroups[i + 1][k].isCombined = true;
                 }
             }
@@ -150,7 +155,7 @@ vector<vector<coveredBool>> groupprimes(vector<vector<coveredBool>>& mintermGrou
     for (int i = 0; i < mintermGroups.size() - 1; i++) {
         for (int j = 0; j < mintermGroups[i].size(); j++) {
           
-                if (mintermGroups[i][j].isCombined == false) {
+                if (mintermGroups[i][j].isCombined == false &&mintermGroups[i][j].visited ==false) {
                     primeimplicants[i].push_back(mintermGroups[i][j]);
 
 
@@ -160,6 +165,7 @@ vector<vector<coveredBool>> groupprimes(vector<vector<coveredBool>>& mintermGrou
         }
 
     }
+
     return primeimplicants;
 }
 
